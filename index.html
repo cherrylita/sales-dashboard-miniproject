@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/dashboard.svg></div><div class="menu-item">Dashboard</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/profile.svg></div><div class="menu-item">Profile</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/leaderboard.svg></div><div class="menu-item">Leaderboard</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/order.svg></div><div class="menu-item">Order</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/product.svg></div><div class="menu-item">Product</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/sales-report.svg></div><div class="menu-item">Sales Report</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/message.svg></div><div class="menu-item">Message</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/settings.svg></div><div class="menu-item">Settings</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/history.svg></div><div class="menu-item">History</div></a></li>
+                <li><a href="#"><div class="menu-item-icon"><img src=/svg/signout.svg></div><div class="menu-item">Sign Out</div></a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="search-field">
+                    <form class="search">
+                        <input type="search" id="search" name="search" placeholder="Search anything">
+                    </form>
+                </div>
+                <div class="topbar-menu"><img src=/svg/bell-notif.svg height="24px";><img src=/png/avatar.jpeg width="36px"; height="36px"; style="border-radius: 50%";><img src=/svg/chevron.svg height="8px";></div>
+            </div>
+
+            <div class="stats">
+                <div class="stats-container" id="todays-sales">
+                    <h3>Today's Sales</h3>
+                    <p>Sales Summary</p>
+                    <div class="todays-sales-stats-container">
+                        <div class="todays-sales-stats">
+                            <img src=/svg/total-sales.svg>
+                            <h4>$5k</h4>
+                            <h5>Total Sales</h5>
+                            <p style="color: #FEB95A;">+10% From Yesterday</p>
+                        </div>
+                        <div class="todays-sales-stats">
+                            <img src=/svg/total-order.svg>
+                            <h4>500</h4>
+                            <h5>Total Order</h5>
+                            <p style="color: #A9DFD8;">+8% From Yesterday</p>
+                        </div>
+                        <div class="todays-sales-stats">
+                            <img src=/svg/product-sold.svg>
+                            <h4>9</h4>
+                            <h5>Product Sold</h5>
+                            <p style="color: #F2C8ED;">+2% From Yesterday</p>
+                        </div>
+                        <div class="todays-sales-stats">
+                            <img src=/svg/new-customer.svg>
+                            <h4>12</h4>
+                            <h5>New Customer</h5>
+                            <p style="color: #20AEF3;">+3% From Yesterday</p>                  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-container" id="level">
+                    <h3>Level</h3>
+                        <canvas id="levelChart" style="margin-top: 20px;"></canvas>
+                        <div class="level-legend">
+                        <div class="legend-item">
+                            <span class="legend-color volume"></span> Volume
+                        </div>
+                        <div class="divider"></div>
+                        <div class="legend-item">
+                            <span class="legend-color service"></span> Service
+                        </div>
+                        </div>
+                </div>
+
+                <div class="stats-container" id="top-products">
+                    <h3>Top Products</h3>
+                    <table>
+                        <tr>
+                            <th class="table-number">#</th>
+                            <th class="table-name">Name</th>
+                            <th class="table-popularity">Popularity</th>
+                            <th class="table-sales">Sales</th>
+                        </tr>
+                        <tr>
+                            <td class="table-number">01</td>
+                            <td class="table-name">Home Decorations</td>
+                            <td class="table-popularity">
+                                <div class="product">
+                                    <div class="progress-bar">
+                                      <div class="progress-fill" id="progressFill1"></div>
+                                    </div>
+                                  </div>                                  
+                            </td>
+                            <td class="table-sales">
+                                <div class="percentage-container" id="percentage-container1">46%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">02</td>
+                            <td class="table-name">Kitchen Appliances</td>
+                            <td class="table-popularity">
+                                <div class="product">
+                                    <div class="progress-bar">
+                                      <div class="progress-fill" id="progressFill2"></div>
+                                    </div>
+                                  </div>  
+                            </td>
+                            <td class="table-sales">
+                                <div class="percentage-container" id="percentage-container2">17%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">03</td>
+                            <td class="table-name">Smart Gadgets</td>
+                            <td class="table-popularity">
+                                <div class="product">
+                                    <div class="progress-bar">
+                                      <div class="progress-fill" id="progressFill3"></div>
+                                    </div>
+                                  </div>  
+                            </td>
+                            <td class="table-sales">
+                                <div class="percentage-container" id="percentage-container3">19%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-number">04</td>
+                            <td class="table-name">Pet Essentials</td>
+                            <td class="table-popularity">
+                                <div class="product">
+                                    <div class="progress-bar">
+                                      <div class="progress-fill" id="progressFill4"></div>
+                                    </div>
+                                  </div>  
+                            </td>
+                            <td class="table-sales">
+                                <div class="percentage-container" id="percentage-container4">29%</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="stats-container" id="customer-fulfillment">
+                    <h3>Customer Fulfillment</h3>
+                    <canvas id="fulfillmentChart"></canvas>
+                    <div class="fulfillment-comparison">
+                        <div class="month-comparison">
+                            <span class="month-label">Last Month</span>
+                            <span class="month-amount">$4,087</span>
+                        </div>
+                        <div class="month-comparison">
+                            <span class="month-label">This Month</span>
+                            <span class="month-amount">$5,490</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-container" id="earnings">
+                    <h3>Earnings</h3>
+                    <p>Total Expense</p>
+                    <h3 style="color:#A9DFD8";><b>$6078.76</b></h3>
+                    <p>+17% more than last month</p>
+                    <canvas id="earningsChart"></canvas>
+                </div>
+
+                <div class="stats-container" id="visitor-earnings">
+                    <div class="visitor-earning-container">
+                    <h3>Visitor Earnings</h3>
+                    <div class="new-visitor-container"><div class="bullet"></div>New Visitor</div>
+                    </div>
+                    <canvas id="visitorChart" width="400" height="130"></canvas>
+                </div>
+            </div>
+        </div>         
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+    </body>
+</html>
