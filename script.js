@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
           {
             label: 'Volume',
             data: [30, 40, 35, 50, 45, 60, 70],
-            backgroundColor: '#9CF2F2',
+            backgroundColor: '#A9DFD8',
             borderRadius: 4,
             barThickness: 20,
           },
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
           },
           y: {
             stacked: true,
-            grid: { color: '#333' }, 
+            grid: { color: '#21222D' }, 
             ticks: {
               display: true,    
               color: '#aaa',
@@ -53,23 +53,23 @@ document.addEventListener('DOMContentLoaded', function() {
     new Chart(fulfillmentCtx, {
       type: 'line',
       data: {
-        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        labels: ['W1', 'W2', 'W3', 'W4'],
         datasets: [
           {
             label: 'Last Month',
-            data: [3500, 3800, 4000, 4087],
-            borderColor: '#A9DFD8',
-            borderWidth: 2,
+            data: [3500, 3400, 4500, 3900],
+            borderColor: '#F2C8ED',
+            borderWidth: 5,
             tension: 0.4,
-            pointRadius: 0
+            pointRadius: 2
           },
           {
             label: 'This Month',
-            data: [4200, 4800, 5200, 5490],
-            borderColor: '#20AEF3',
-            borderWidth: 2,
+            data: [3739, 3892, 3620, 5490],
+            borderColor: '#A9DFD8',
+            borderWidth: 5,
             tension: 0.4,
-            pointRadius: 0
+            pointRadius: 2
           }
         ]
       },
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-  /* Visitor Insights */
+  /* Visitor Earnings */
 
   const ctx = document.getElementById('visitorChart').getContext('2d');
 
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
           beginAtZero: true,
         },
         grid: {
-          color: '#333',
+          color: '#21222D',
         }
       }
     }    
